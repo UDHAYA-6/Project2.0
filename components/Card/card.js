@@ -3,21 +3,19 @@ import classes from "./card.module.css";
 
 const data = [
   {
-    title: "Page views",
-    stats: "456,133",
-    description:
-      "24% more than in the same month last year, 33% more that two years ago",
+    title: "Languages, Framework/library, Styling",
+    stats: "Front-end",
+    description: "Html, Css,Java Script, React js, Next js, ",
   },
   {
-    title: "New users",
-    stats: "2,175",
-    description:
-      "13% less compared to last month, new user engagement up by 6%",
+    title: "Languages, Databse, API",
+    stats: "Back-end",
+    description: "Django, Python, MongoDb",
   },
   {
-    title: "Completed orders",
-    stats: "1,994",
-    description: "1994 orders were completed this month, 97% satisfaction rate",
+    title: "Other tools",
+    stats: "Version Control",
+    description: "Git, GitHub, Gitlab, Material UI, Mantine UI",
   },
 ];
 

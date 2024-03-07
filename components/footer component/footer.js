@@ -72,7 +72,7 @@ export default function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © 2024 udhayakumar. All rights reserved.
         </Text>
 
         <Group

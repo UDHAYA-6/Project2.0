@@ -1,8 +1,8 @@
 const IMAGES = {
-  auditors: "/react.jpg",
-  lawyers: "/next.jpg",
-  accountants: "/integrate.jpg",
-  others: "/responsive.jpg",
+  react: "/react.jpg",
+  next: "/next.jpg",
+  api: "/integrate.jpg",
+  performance: "/responsive.jpg",
 };
 
 export default IMAGES;

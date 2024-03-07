@@ -11,26 +11,28 @@ import classes from "./service.module.css";
 
 const data = [
   {
-    image: "auditors",
-    title: "Pharmacists",
+    image: "react",
+    title: "React js",
     description:
-      "Azurill can be seen bouncing and playing on its big, rubbery tail",
+      "From building interactive user interfaces to developing complex single-page applications,to  ensures a seamless and efficient development process",
   },
   {
-    image: "lawyers",
-    title: "Lawyers",
-    description: "Fans obsess over the particular length and angle of its arms",
-  },
-  {
-    image: "accountants",
-    title: "Bank owners",
+    image: "next",
+    title: "Next js",
     description:
-      "They divvy up their prey evenly among the members of their pack",
+      "Harness the power of Next.js for web projects to optimizing performance, and delivering server-side rendering for enhanced user experiences",
   },
   {
-    image: "others",
-    title: "Others",
-    description: "Phanpy uses its long nose to shower itself",
+    image: "api",
+    title: "API Integration",
+    description:
+      "Seamlessly integrate APIs in applications, enhancing functionality to ensure smooth communication between your frontend and backend",
+  },
+  {
+    image: "performance",
+    title: "Performance Optimization",
+    description:
+      "Performance optimization techniques, including code splitting, lazy loading, and image optimization, to deliver fast-loading websites",
   },
 ];
 
@@ -57,19 +59,17 @@ export default function Services() {
 
   return (
     <Container size={700} className={classes.wrapper}>
-      <Text className={classes.supTitle}>Use cases</Text>
+      <Text className={classes.supTitle}>Our Services</Text>
 
       <Title className={classes.title} order={2}>
-        PharmLand is <span className={classes.highlight}>not</span> just for
-        pharmacists
+        TechLand: Where Code Meets Creativity
       </Title>
 
       <Container size={660} p={0}>
         <Text c="dimmed" className={classes.description}>
-          Its lungs contain an organ that creates electricity. The crackling
-          sound of electricity can be heard when it exhales. Azurill’s tail is
-          large and bouncy. It is packed full of the nutrients this Pokémon
-          needs to grow.
+          Elevate your online business with our expertise in building platforms
+          using React.js and Next.js. We focus on creating secure, scalable, and
+          user-friendly online stores that drive conversions.
         </Text>
       </Container>
 

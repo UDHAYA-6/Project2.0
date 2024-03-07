@@ -10,7 +10,7 @@ import {
   rem,
 } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
-import image from "@/public/image.svg";
+import image from "@/public/image2.svg";
 import classes from "./Hero.module.css";
 
 export default function HeroBullets() {
@@ -57,7 +57,7 @@ export default function HeroBullets() {
 
           <Group mt={30}>
             <Button radius="xl" size="md" className={classes.control}>
-              Get started
+              Hire me
             </Button>
             <Button
               variant="default"
@@ -65,7 +65,7 @@ export default function HeroBullets() {
               size="md"
               className={classes.control}
             >
-              Source code
+              Download cv
             </Button>
           </Group>
         </div>
