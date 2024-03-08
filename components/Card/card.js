@@ -3,19 +3,21 @@ import classes from "./card.module.css";
 
 const data = [
   {
-    title: "Languages, Framework/library, Styling",
-    stats: "Front-end",
-    description: "Html, Css,Java Script, React js, Next js, ",
+    title: "Percentage: 82%",
+    stats: "HSC - 2020",
+    description:
+      "Children's Paradise Matriculation Higher Secondary School, Chennai",
   },
   {
-    title: "Languages, Databse, API",
-    stats: "Back-end",
-    description: "Django, Python, MongoDb",
+    title: "CGPA: 8.6",
+    stats: "B.Tech IT 2020 - 2024",
+    description:
+      "VelTech High Tech Dr.Rangarajan Dr.Sakunthala Enginnering College, Chennai",
   },
   {
-    title: "Other tools",
-    stats: "Version Control",
-    description: "Git, GitHub, Gitlab, Material UI, Mantine UI",
+    title: "Project Intern",
+    stats: "Current Job",
+    description: "IDP Eduaction Ltd, Chennai",
   },
 ];
 

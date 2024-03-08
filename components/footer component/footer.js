@@ -1,8 +1,8 @@
 import { Text, Container, ActionIcon, Group, rem } from "@mantine/core";
 import {
-  IconBrandTwitter,
-  IconBrandYoutube,
   IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandGithub,
 } from "@tabler/icons-react";
 import { MantineLogo } from "@mantinex/mantine-logo";
 import classes from "./footer.module.css";
@@ -20,22 +20,32 @@ const data = [
   {
     title: "Project",
     links: [
-      { label: "Contribute", link: "#" },
-      { label: "Media assets", link: "#" },
-      { label: "Changelog", link: "#" },
-      { label: "Releases", link: "#" },
+      { label: "Bus ticket booking", link: "https://bus-udhay.vercel.app/" },
+      { label: "Furniture store", link: "https://furniture-udhay.vercel.app/" },
+      { label: "Food ordering", link: "https://spicy-udhay.vercel.app" },
+      { label: "Portfolio", link: "https://portfolio-udhay.vercel.app/" },
     ],
   },
   {
     title: "Community",
     links: [
-      { label: "Join Discord", link: "#" },
-      { label: "Follow on Twitter", link: "#" },
-      { label: "Email newsletter", link: "#" },
-      { label: "GitHub discussions", link: "#" },
+      {
+        label: "LinkedIn",
+        link: "https://www.linkedin.com/in/udhaya-kumar-developer",
+      },
+      {
+        label: "Instagram",
+        link: "https://www.instagram.com/udhay_kumar_official",
+      },
+      { label: "Email", link: "#" },
+      { label: "GitHub", link: "https://github.com/UDHAYA-6" },
     ],
   },
 ];
+
+const OpenLink = (link) => {
+  window.open(link, "_blank");
+};
 
 export default function FooterLinks() {
   const groups = data.map((group, groupIndex) => {
@@ -44,8 +54,7 @@ export default function FooterLinks() {
         key={linkIndex}
         className={classes.link}
         component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
+        onClick={() => OpenLink(link.link)}
       >
         {link.label}
       </Text>
@@ -82,19 +91,26 @@ export default function FooterLinks() {
           wrap="nowrap"
         >
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandTwitter
+            <IconBrandLinkedin
+              onClick={() =>
+                OpenLink("https://www.linkedin.com/in/udhaya-kumar-developer")
+              }
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
           </ActionIcon>
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube
+            <IconBrandGithub
+              onClick={() => OpenLink("https://github.com/UDHAYA-6")}
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
           </ActionIcon>
           <ActionIcon size="lg" color="gray" variant="subtle">
             <IconBrandInstagram
+              onClick={() =>
+                OpenLink("https://www.instagram.com/udhay_kumar_official")
+              }
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />

@@ -18,14 +18,12 @@ export default function HeroBullets() {
     <Container>
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>
-            A <span className={classes.highlight}>modern</span> React <br />{" "}
-            components library
-          </Title>
+          <Title className={classes.title}>I'm Udhaya Kumar</Title>
           <Text c="dimmed" mt="md">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
+            Welcome to My Portfolio! If you're just curious about what I do,
+            feel free to dive in.Explore my portfolio and discover how I
+            leverage the power of cutting-edge technologies, to bring ideas to
+            life.
           </Text>
 
           <List
