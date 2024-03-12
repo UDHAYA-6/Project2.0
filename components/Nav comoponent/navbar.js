@@ -18,7 +18,7 @@ const links = [
       { scroll: "https://portfolio-udhay.vercel.app", label: "Portfolio" },
     ],
   },
-  { link: "https://github.com/UDHAYA-6", label: "Github" },
+  { scroll: "https://github.com/UDHAYA-6", label: "Github" },
   { scroll: 900, label: "Services" },
   { scroll: 3390, label: "Contact" },
 ];
@@ -26,7 +26,14 @@ const links = [
 export default function HeaderMegaMenu() {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
   const Navigate = (value) => {
-    alert(value);
+    if (isNaN(value)) {
+      window.open(value, "_blank");
+    } else {
+      window.scrollBy({
+        top: value,
+        behavior: "smooth",
+      });
+    }
   };
   const themeToggle = () => {
     setColorScheme(colorScheme === "dark" ? "light" : "dark");

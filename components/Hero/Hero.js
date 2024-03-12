@@ -40,30 +40,20 @@ export default function HeroBullets() {
             }
           >
             <List.Item>
-              <b>TypeScript based</b> – build type safe applications, all
-              components and hooks export types
+              <b>Technological proficiency</b> –Java Script, React js, Next js ,
+              Type script, Redux
             </List.Item>
             <List.Item>
-              <b>Free and open source</b> – all packages have MIT license, you
-              can use Mantine in any project
+              <b>Innovation and Continuous Improvement</b>
             </List.Item>
             <List.Item>
-              <b>No annoying focus ring</b> – focus ring will appear only when
-              user navigates with keyboard
+              <b>Problem-Solving Proficiency</b>
             </List.Item>
           </List>
 
           <Group mt={30}>
             <Button radius="xl" size="md" className={classes.control}>
               Hire me
-            </Button>
-            <Button
-              variant="default"
-              radius="xl"
-              size="md"
-              className={classes.control}
-            >
-              Download cv
             </Button>
           </Group>
         </div>

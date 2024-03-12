@@ -31,6 +31,9 @@
   font-weight: 700;
   margin-bottom: var(--mantine-spacing-md);
   font-family: Greycliff CF, var(--mantine-font-family);
+  @media (max-width: 992px) {
+    font-size: 20px;
+  }
 }
 
 .description {

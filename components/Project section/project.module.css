@@ -11,3 +11,9 @@
   font-family: "Greycliff CF", var(--mantine-font-family);
   font-weight: bold;
 }
+
+.div {
+  @media (max-width: 992px) {
+    display: none;
+  }
+}

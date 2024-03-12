@@ -11,7 +11,11 @@ export default function FAQ() {
       <Container size="lg">
         <Grid id="faq-grid" gutter={50}>
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <Image src={image.src} alt="Frequently Asked Questions" />
+            <Image
+              src={image.src}
+              alt="Frequently Asked Questions"
+              className={classes.img}
+            />
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Title order={2} ta="left" className={classes.title}>

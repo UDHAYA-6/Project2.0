@@ -53,7 +53,7 @@ export default function Projects() {
   ));
 
   return (
-    <Container py="xl">
+    <Container py="xl" className={classes.div}>
       <center>
         <h1>Recent Projects</h1>
       </center>
