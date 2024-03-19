@@ -1,10 +1,7 @@
 import "@mantine/core/styles.css";
 import "@/styles/globals.css";
 import HeaderMegaMenu from "@/components/Nav comoponent/navbar";
-
 import { createTheme, MantineProvider } from "@mantine/core";
-
-import "@/styles/globals.css";
 export default function App({
   Component,
   pageProps: { session, ...pageProps },

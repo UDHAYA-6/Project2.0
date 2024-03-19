@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderMegaMenu from "@/components/Nav comoponent/navbar";
 import FooterLinks from "@/components/footer component/footer";
 import HeroBullets from "@/components/Hero/Hero";
 import ContactUs from "@/components/Contact Form/contactUs";
@@ -11,19 +10,13 @@ import Skills from "@/components/Skills component/skills";
 const index = () => {
   return (
     <>
-      <div id="Education">
-        <HeroBullets />
-      </div>
+      <HeroBullets />
       <Card />
-      <div id="Services">
-        <Services />
-      </div>
+      <Services />
       <Projects />
       <Skills />
       <FAQ />
-      <div id="Contact">
-        <ContactUs />
-      </div>
+      <ContactUs />
       <FooterLinks />
     </>
   );
