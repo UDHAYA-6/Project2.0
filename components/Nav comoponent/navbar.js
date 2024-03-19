@@ -23,7 +23,7 @@ const links = [
   { scroll: 3390, label: "Contact" },
 ];
 
-export default function HeaderMegaMenu() {
+export default function HeaderMegaMenu(props) {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
   const Navigate = (value) => {
     if (isNaN(value)) {
@@ -40,7 +40,7 @@ export default function HeaderMegaMenu() {
   };
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link} onClick={() => Navigate(item.scroll)}>
+      <Menu.Item key={item.label} onClick={() => Navigate(item.scroll)}>
         {item.label}
       </Menu.Item>
     ));
@@ -81,7 +81,7 @@ export default function HeaderMegaMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <h3>UK</h3>
+          <h3>WELCOME ALL</h3>
           <Group gap={2} visibleFrom="sm">
             {items}
           </Group>

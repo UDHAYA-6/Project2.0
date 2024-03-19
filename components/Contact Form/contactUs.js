@@ -6,18 +6,42 @@ import {
   Textarea,
   Button,
   Group,
-  ActionIcon,
 } from "@mantine/core";
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-} from "@tabler/icons-react";
+import React, { useState } from "react";
 import ContactIconsList from "./ContactIcons";
 import classes from "./ConatctUs.module.css";
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
 export default function ContactUs() {
+  const [FormData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Message: "",
+  });
+
+  const HandleChange = (event) => {
+    const { value, id } = event.target;
+    setFormData((preState) => ({ ...preState, [id]: value }));
+  };
+
+  const FormSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("/api/feedback", {
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify({ FormData }),
+      method: "POST",
+    });
+    const responseData = await response.json();
+    if (response.status == 200) {
+      alert(responseData.msg);
+      setFormData({
+        Name: "",
+        Email: "",
+        Message: "",
+      });
+    } else {
+      alert(responseData.json);
+    }
+  };
   return (
     <div className={classes.wrapper}>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
@@ -29,33 +53,45 @@ export default function ContactUs() {
 
           <ContactIconsList />
         </div>
-        <div className={classes.form}>
-          <TextInput
-            label="Email"
-            placeholder="your@gmail.com"
-            required
-            classNames={{ input: classes.input, label: classes.inputLabel }}
-          />
+        <form className={classes.form} onSubmit={FormSubmit}>
           <TextInput
             required
+            id="Name"
             label="Name"
             placeholder="Your name"
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
+            value={FormData.Name}
+            onChange={HandleChange}
           />
+          <TextInput
+            id="Email"
+            label="Email"
+            placeholder="your@gmail.com"
+            required
+            classNames={{ input: classes.input, label: classes.inputLabel }}
+            value={FormData.Email}
+            onChange={HandleChange}
+          />
+
           <Textarea
+            id="Message"
             required
             label="Your message"
-            placeholder="I want to connect with ..."
+            placeholder="I want to connect..."
             minRows={4}
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
+            value={FormData.Message}
+            onChange={HandleChange}
           />
 
           <Group justify="flex-end" mt="md">
-            <Button className={classes.control}>Send message</Button>
+            <Button type="submit" className={classes.control}>
+              Send message
+            </Button>
           </Group>
-        </div>
+        </form>
       </SimpleGrid>
     </div>
   );

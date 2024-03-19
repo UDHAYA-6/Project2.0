@@ -14,6 +14,12 @@ import image from "@/public/image2.svg";
 import classes from "./Hero.module.css";
 
 export default function HeroBullets() {
+  const HireMe = () => {
+    window.scrollBy({
+      top: 3000,
+      behavior: "smooth",
+    });
+  };
   return (
     <Container>
       <div className={classes.inner}>
@@ -52,7 +58,12 @@ export default function HeroBullets() {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+            <Button
+              radius="xl"
+              size="md"
+              className={classes.control}
+              onClick={HireMe}
+            >
               Hire me
             </Button>
           </Group>

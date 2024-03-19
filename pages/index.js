@@ -10,17 +10,22 @@ import Projects from "@/components/Project section/Project";
 import Skills from "@/components/Skills component/skills";
 const index = () => {
   return (
-    <div>
-      <HeaderMegaMenu />
-      <HeroBullets />
+    <>
+      <div id="Education">
+        <HeroBullets />
+      </div>
       <Card />
-      <Services />
+      <div id="Services">
+        <Services />
+      </div>
       <Projects />
       <Skills />
       <FAQ />
-      <ContactUs />
+      <div id="Contact">
+        <ContactUs />
+      </div>
       <FooterLinks />
-    </div>
+    </>
   );
 };
 
